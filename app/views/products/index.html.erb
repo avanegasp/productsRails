@@ -17,9 +17,11 @@
       <td><%=product.id%></td>
       <td><%=product.name%></td>
       <td><%=product.price%></td>
-      <td>categoría</td>
-      <td><%= link_to "<span class='glyphicon glyphicon-pencil'></span>".html_safe, edit_product_path(product.id)%></td>
-      <td><%= link_to "<span class='glyphicon glyphicon-trash'></span>".html_safe, product, method: :delete, data: { confirm: "¿Estás seguro de eliminar este Producto?"}%></td>
+  <%product.categories.each do |category|%>
+      <td><%=category.name%></td>
+  <%end%>
+  <td><%= link_to "<span class='glyphicon glyphicon-pencil'></span>".html_safe, edit_product_path(product.id)%></td>
+  <td><%= link_to "<span class='glyphicon glyphicon-trash'></span>".html_safe, product, method: :delete, data: { confirm: "¿Estás seguro de eliminar este Producto?"}%></td>
     </tr>
   </tbody>
   <%end%>

@@ -10,7 +10,6 @@ class ProductsController < ApplicationController
   end
 
   def create
-    byebug
     @product =Product.create(product_params)
     if @product.save
       redirect_to products_path, notice: "El producto fue creado con éxito"

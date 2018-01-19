@@ -24,7 +24,7 @@
       <div class="row">
           <div class="col-sm-12 col-xs-12">
               <div class="form-inline">
-                <%=f.collection_check_boxes :category_ids, Category.all, :id, :name_with_initial%>
+                <%=f.collection_check_boxes :category_ids, Category.all, :id, :name %>
               </div>
           </div>
       </div>
