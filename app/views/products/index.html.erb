@@ -17,7 +17,7 @@
       <td><%=product.id%></td>
       <td><%=product.name%></td>
       <td><%=product.price%></td>
-      <td>categoría</td>
+      <td><%=product.categories%></td>
       <td><%= link_to "<span class='glyphicon glyphicon-pencil'></span>".html_safe, edit_product_path(product.id)%></td>
       <td><%= link_to "<span class='glyphicon glyphicon-trash'></span>".html_safe, product, method: :delete, data: { confirm: "¿Estás seguro de eliminar este Producto?"}%></td>
     </tr>
